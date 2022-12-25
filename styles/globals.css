@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,12 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.card > p {
+  position: relative;
+  margin-bottom: 4rem;
 }
 
 p {
@@ -37,7 +42,7 @@ header a {
 }
 
 .container {
-  max-width: 768px;
+  max-width: 90vw;
   margin: auto;
   overflow: auto;
   padding: 0 10px;
@@ -54,6 +59,9 @@ header a {
   text-decoration: none;
   font-size: 15px;
   font-family: inherit;
+  /* /// */
+  bottom: 15px;
+  position: absolute;
 }
 
 .btn:focus {
@@ -68,16 +76,27 @@ header a {
   background: #f4f4f4;
   color: #000;
   margin-bottom: 20px;
+  display: inline-block;
+  background: steelblue;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
 }
 
 .posts {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 30px;
 }
 
 .card {
+  position: relative;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -112,7 +131,13 @@ ol {
   line-height: 2.3;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1050px) {
+  .posts {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
   .posts {
     grid-template-columns: 1fr;
   }
